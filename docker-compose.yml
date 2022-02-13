@@ -1,0 +1,13 @@
+version: '3'
+services:
+  kali-linux:
+    container_name: kali
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/test
+    stdin_open: true
+    tty: true
+    cap_add:
+      - NET_ADMIN
